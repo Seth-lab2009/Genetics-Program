@@ -3,7 +3,7 @@ using namespace std;
 
 void intro(); 
 // Beginning function
-void input(int& Dad, int& Mom, int& retry);
+void input(int& Dad, int& Mom, int& retry); 
 // Function takes the data of the user
 void punnetsquare(int& Dad, int& Mom);
 // Function outputs the punnet square, Genotypes, and the Phenotypes.
@@ -28,12 +28,12 @@ void intro() {
 	cout <<"This program will show the chances of a child to either be a carrier or have colorblindness\n";// The first statement the user will see
 }
 void input(int& Dad, int& Mom, int& retry) {
-	cout << "If the Dad isn't colorblind press 1 and if the Dad is colorblind press 2.\n";
+	cout << "If the Dad isn't colorblind press 1 and if the Dad is colorblind press 2.\n"; // This is where the user will enter the father's data.
 	cin>> Dad;
-	cout << "If the Mom isn't colorblind press 1, if the Mom is a silent carrier press 2, if the Mom is colorblind press 3.\n";
+	cout << "If the Mom isn't colorblind press 1, if the Mom is a silent carrier press 2, if the Mom is colorblind press 3.\n"; // This is where the user will enter data about the mother.
 	cin >> Mom;
 }
-void punnetsquare(int& Dad, int& Mom) { // The punnett squares start here.
+void punnetsquare(int& Dad, int& Mom) { // The punnett squares, Genotypes, and Phenotypes start here.
 	if (Dad == 1 & Mom == 1) {
 		cout << "             X   |    Y\n";
 		cout << "       --------------------\n";
@@ -94,7 +94,7 @@ void punnetsquare(int& Dad, int& Mom) { // The punnett squares start here.
 	}
 }
 void loop(int& retry) {
-	cout << "If you want to redo the program press 1 and if you want to stop press 2.\n";
+	cout << "If you want to redo the program press 1 and if you want to stop press 2.\n"; // If the user wants the program to run again, this is where the program asks that. 
 	cin >> retry;
 	if (retry == 1) {
 	} else {
