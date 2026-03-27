@@ -2,18 +2,18 @@
 using namespace std;
 
 void intro(); 
-// Beginning function
-void input(int& Dad, int& Mom, int& retry); 
-// Function takes the data of the user
+// intro function
+void input(int& Dad, int& Mom, int& retry);
+// Function takes the input of the user
 void punnetsquare(int& Dad, int& Mom);
-// Function outputs the punnet square, Genotypes, and the Phenotypes.
+// Function outputs the punnetsquare, Geno, and Phenotypes
 void loop(int& retry);
 
 
 int main()
 {
 	int Dad, Mom, retry;
-	retry = 1; // Beginning of loop
+	retry = 1; // Beginning of the loop
 	do {
 		intro();
 		input(Dad,Mom,retry);
@@ -25,15 +25,15 @@ int main()
 }
 
 void intro() {
-	cout <<"This program will show the chances of a child to either be a carrier or have colorblindness\n";// The first statement the user will see
+	cout <<"This program will show the chances of a child to either be a carrier or have colorblindness\n";
 }
 void input(int& Dad, int& Mom, int& retry) {
-	cout << "If the Dad isn't colorblind press 1 and if the Dad is colorblind press 2.\n"; // This is where the user will enter the father's data.
+	cout << "If the Dad isn't colorblind press 1 and if the Dad is colorblind press 2.\n";
 	cin>> Dad;
-	cout << "If the Mom isn't colorblind press 1, if the Mom is a silent carrier press 2, if the Mom is colorblind press 3.\n"; // This is where the user will enter data about the mother.
+	cout << "If the Mom isn't colorblind press 1, if the Mom is a silent carrier press 2, if the Mom is colorblind press 3.\n";
 	cin >> Mom;
 }
-void punnetsquare(int& Dad, int& Mom) { // The punnett squares, Genotypes, and Phenotypes start here.
+void punnetsquare(int& Dad, int& Mom) {
 	if (Dad == 1 & Mom == 1) {
 		cout << "             X   |    Y\n";
 		cout << "       --------------------\n";
@@ -69,7 +69,7 @@ void punnetsquare(int& Dad, int& Mom) { // The punnett squares, Genotypes, and P
 		cout << "    X  |    XbX   |   XY    |\n";
 		cout << "       --------------------\n";
 		cout << "Genotypes: XbY = 0%, XbX = 50%, XbXb = 0% \n";
-		cout << "Phenotypes: Colorblind = 0%, Not Colorblind = 100%\n";
+		cout << "Phenotypes: Colorblind = 50%, Not Colorblind = 100%\n";
 	} else if (Dad == 2 & Mom == 2) {
 		cout << "            Xb   |    Y\n";
 		cout << "       --------------------\n";
@@ -77,8 +77,8 @@ void punnetsquare(int& Dad, int& Mom) { // The punnett squares, Genotypes, and P
 		cout << "----------------------------\n";
 		cout << "    X  |    XbX   |   XY    |\n";
 		cout << "       --------------------\n";
-		cout << "Genotypes: XcY = 25%, XcX = 25%, XcXc = 25% \n";
-		cout << "Phenotypes: Colorblind = 50%, Not Colorblind = 50%\n";
+		cout << "Genotypes: XbY = 25%, XbX = 25%, XbXb = 25% \n";
+		cout << "Phenotypes: Colorblind = 75%, Not Colorblind = 25%\n";
 
 	} else if (Dad == 2 & Mom == 3) {
 		cout << "            Xb   |    Y\n";
@@ -87,14 +87,14 @@ void punnetsquare(int& Dad, int& Mom) { // The punnett squares, Genotypes, and P
 		cout << "----------------------------\n";
 		cout << "   Xb  |   XbXb   |   XbY   |\n";
 		cout << "       --------------------\n";
-		cout << "Genotypes: XbY = 25%, XbX = 25%, XbXb = 50% \n";
+		cout << "Genotypes: XbY = 50%, XbX = 0%, XbXb = 50% \n";
 		cout << "Phenotypes: Colorblind = 100%, Not Colorblind = 0%\n";
 	} else {
-		cout << "Invalid inputs\n"; // if the user enters something that is not valid
+		cout << "Invalid inputs\n"; // if answer is invalid
 	}
 }
 void loop(int& retry) {
-	cout << "If you want to redo the program press 1 and if you want to stop press 2.\n"; // If the user wants the program to run again, this is where the program asks that. 
+	cout << "If you want to redo the program press 1 and if you want to stop press 2.\n";
 	cin >> retry;
 	if (retry == 1) {
 	} else {
